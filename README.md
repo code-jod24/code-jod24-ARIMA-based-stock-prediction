@@ -1,6 +1,6 @@
-# Reddit Stock Sentiment Analyzer
+# Reddit Stock Sentiment Analyzer and Predictor
 
-This project analyzes Reddit sentiment to predict stock market trends. It uses natural language processing to analyze Reddit posts and comments about stocks, and correlates this sentiment with actual stock price movements.
+This project analyzes Reddit sentiment to predict stock market trends. It uses natural language processing to analyze Reddit posts and comments about stocks, and correlates this sentiment with actual stock price movements. This also uses ARIMA model to estimate next day stock closing price.
 
 ## Setup
 
