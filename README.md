@@ -27,6 +27,8 @@ python stock_sentiment.py
 - Analyzes sentiment using natural language processing
 - Correlates sentiment with stock price movements
 - Provides basic trend predictions
+- Provides a basic estimate of the next day stock closing price
+  
 
 ## Note
 
