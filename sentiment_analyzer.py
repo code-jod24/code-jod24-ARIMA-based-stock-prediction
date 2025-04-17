@@ -8,7 +8,7 @@ from nltk.corpus import stopwords
 import re
 import nltk
 
-class EnhancedSentimentAnalyzer:
+class RedditSentimentAnalyzer:
     def __init__(self):
         self.sia = SentimentIntensityAnalyzer()
         self.vectorizer = TfidfVectorizer(max_features=1000)
