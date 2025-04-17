@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 #     and call its methods instead of importing a non‑existent free function.
 # -----------------------------------------------------------------------------
 
-from sentiment_analyzer import EnhancedSentimentAnalyzer as RedditSentimentAnalyzer
+from sentiment_analyzer import RedditSentimentAnalyzer
 from stock_data import StockDataFetcher
 from plotter import SentimentPlotter
 
