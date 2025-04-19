@@ -2,6 +2,7 @@ import yfinance as yf
 import time
 from requests.exceptions import HTTPError
 
+# Fetch stock data from Yahoo Finance
 class StockDataFetcher:
     def get_stock_data(self, stock_symbol, max_retries=3, retry_delay=5):
         for attempt in range(max_retries):
