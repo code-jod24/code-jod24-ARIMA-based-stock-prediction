@@ -1,3 +1,4 @@
+# Import necessary libraries
 import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -15,7 +16,7 @@ class RedditSentimentAnalyzer:
         self.classifier = RandomForestClassifier(n_estimators=100)
         self.stop_words = set(stopwords.words('english'))
         self.quality_threshold = 0.5  
-        
+       # Data Preprocessing 
     def preprocess_text(self, text):
         """Preprocess text for analysis"""
         if not isinstance(text, str):
@@ -44,7 +45,7 @@ class RedditSentimentAnalyzer:
         """Filter out low quality posts"""
         posts_df['quality_score'] = posts_df.apply(self.calculate_quality_score, axis=1)
         return posts_df[posts_df['quality_score'] > self.quality_threshold]
-    
+    # Use NLTK to process sentiment toward a stock on the post
     def analyze_sentiment(self, text):
         """Enhanced sentiment analysis using both VADER and custom features"""
 
@@ -65,7 +66,7 @@ class RedditSentimentAnalyzer:
         )
         
         return sentiment_score  
-    
+    # Analyze trend based on the sentiment
     def analyze_trend(self, posts_df, window_size=7):
         """Analyze sentiment trend over time"""
         if len(posts_df) == 0:
