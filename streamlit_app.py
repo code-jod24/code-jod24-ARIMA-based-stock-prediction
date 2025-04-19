@@ -1,18 +1,7 @@
 import os
 from datetime import datetime, timedelta
-
 import streamlit as st
 from dotenv import load_dotenv
-
-# -----------------------------------------------------------------------------
-# Internal modules – keep the import surface consistent with the rest
-# -----------------------------------------------------------------------------
-#   * sentiment_analyzer.py currently exposes `EnhancedSentimentAnalyzer`
-#     so we alias it to the public name the UI expects.
-#   * plotter.py offers a *class* called `SentimentPlotter` – we instantiate
-#     and call its methods instead of importing a non‑existent free function.
-# -----------------------------------------------------------------------------
-
 from sentiment_analyzer import RedditSentimentAnalyzer
 from stock_data import StockDataFetcher
 from plotter import SentimentPlotter
@@ -80,13 +69,7 @@ if analyse_btn and ticker:
         "metrics only.",
         icon="ℹ️",
     )
-    
-    # Example of how you would call the plotter once the data is ready
-    # sentiment_series = ...  # pd.Series indexed by date
-    # price_df         = ...  # yfinance history DataFrame
-    # fig = plotter.plot_sentiment_vs_price(sentiment_series, price_df)
-    # st.plotly_chart(fig, use_container_width=True)
-
+ 
 # ----------------------------------------------------------------------------
 # Footer – lightweight branding & help
 # ----------------------------------------------------------------------------
